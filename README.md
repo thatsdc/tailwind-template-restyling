@@ -4,7 +4,7 @@
 This project is a **UI clone** of the [Spotlight Tailwind template](https://spotlight.tailwindui.com/) landing page, built with **React**, **Tailwind CSS**, and **React Router**.  
 It was created for **learning and practice purposes**, to replicate the layout, style, and responsiveness of the original website using modern front-end tools.
 
-Try iy out: [https://thatsdc.github.io/spotlight-tailwind-template/](https://thatsdc.github.io/spotlight-tailwind-template/)
+Try it out: [https://thatsdc.github.io/spotlight-tailwind-template/](https://thatsdc.github.io/spotlight-tailwind-template/)
 
 ---
 
