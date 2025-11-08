@@ -9,6 +9,9 @@ import { useState, useEffect, useRef } from "react";
 
 import React from "react";
 
+const profileImageUrl =
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=128&q=75";
+
 function SubHeader() {
   const location = useLocation();
 
@@ -178,7 +181,7 @@ function Header({ darkMode, toggleDarkMode }) {
           >
             <div className="rounded-full overflow-hidden">
               <img
-                src="https://img.freepik.com/premium-vector/illustration-person-waving_498048-103.jpg"
+                src={profileImageUrl}
                 alt="profile"
                 className="aspect-auto min-h-10"
               />

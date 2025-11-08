@@ -4,7 +4,7 @@ import {
   createBrowserRouter,
   createHashRouter,
 } from "react-router-dom";
-import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 import About from "./pages/About";
 import Articles from "./pages/Articles";
 import Projects from "./pages/Projects";
@@ -44,7 +44,6 @@ function App() {
   // }, []);
 
   const toggleDarkMode = () => setDarkMode((oldState) => !oldState);
-  useEffect(() => console.log(darkMode), [darkMode]);
 
   const router = createHashRouter([
     {
@@ -54,7 +53,7 @@ function App() {
       children: [
         {
           path: "",
-          element: <Home />,
+          element: <Profile />,
         },
         {
           path: "/about",

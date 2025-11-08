@@ -5,6 +5,9 @@ import { ReactComponent as InstagramIcon } from "../assets/socials-icons/icons8-
 import { ReactComponent as EmailIcon } from "../assets/socials-icons/email-svgrepo-com.svg";
 import { useEffect, useRef } from "react";
 
+const imageUrl =
+  "https://nomorecopyright.com/_next/image?url=https%3A%2F%2Fres.cloudinary.com%2Fddtk9h9bc%2Fimage%2Fupload%2Fv1756001723%2Ftlwujlsl7jiqhy6qrgfx.webp&w=1200&q=75";
+
 function About() {
   const image = useRef();
   const scotch = useRef([]);
@@ -62,7 +65,7 @@ function About() {
             ></div>
             <img
               ref={image}
-              src="https://bambooimport.com/cdn/shop/articles/pandabeer-scaled_1200x1200_crop_center.jpg?v=1668091796"
+              src={imageUrl}
               alt=""
               className="rounded-3xl overflow-hidden transition-transform duration-1000 ease-out-in scale-50"
             />

@@ -2,6 +2,8 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 
 function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className="border-t border-zinc-100 dark:border-zinc-700/40 flex py-10">
       <div className=" w-full px-12  flex flex-col items-center gap-y-5 text-sm md:flex-row md:justify-between md:gap-x-10 ">
@@ -38,7 +40,7 @@ function Footer() {
           </NavLink>
         </div>
         <p className="text-sm text-zinc-400 dark:text-zinc-500">
-          © 2023 Spencer Sharp. All rights reserved.
+          © {currentYear} Spencer Sharp. All rights reserved.
         </p>
       </div>
     </div>

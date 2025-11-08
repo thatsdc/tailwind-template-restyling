@@ -1,6 +1,4 @@
-export function getFormattedDate(
-  dateString = "Tue Aug 19 1975 23:15:30 GMT+0200 (CEST)"
-) {
+export function getFormattedDate(isoString) {
   const monthNames = [
     "January",
     "February",
@@ -15,7 +13,7 @@ export function getFormattedDate(
     "November",
     "December",
   ];
-  const date = new Date(dateString);
+  const date = new Date(isoString);
 
   let formattedDate = `${
     monthNames[date.getMonth()]

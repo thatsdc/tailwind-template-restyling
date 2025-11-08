@@ -13,11 +13,42 @@ import StarbucksIcon from "../assets/cv-icons/starbucks.4a5bd050.svg";
 import CvListElement from "../components/CvListElement";
 import ArticlePreview from "../components/ArticlePreview";
 
-function Home() {
+const dummyArticles = [
+  {
+    title: "Crafting a design system for a multiplanetary future",
+    description:
+      "Most companies try to stay ahead of the curve when it comes to visual design, but for Planetaria we needed to create a brand that would still inspire us 100 years from now when humanity has spread across our entire solar system.",
+    isoDate: "2022-08-19T21:15:30.000Z",
+  },
+  {
+    title: "Engineering navigation systems for interplanetary travel",
+    description:
+      "Building reliable navigation for spacecraft requires precision beyond Earth's standards. Our team developed quantum gyroscopes that ensure accuracy even when GPS signals are billions of kilometers away.",
+    isoDate: "2022-07-14T16:30:15.000Z",
+  },
+  {
+    title: "Terraforming Mars: The design challenges of a new world",
+    description:
+      "Transforming the red planet into a habitable environment isn’t just a scientific endeavor—it’s a design revolution. We explore how architecture, technology, and ethics converge in humanity’s greatest experiment.",
+    isoDate: "2022-01-03T09:42:00.000Z",
+  },
+];
+
+const profileImageUrl =
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar.51a13c67.jpg&w=128&q=75";
+
+const imagesSlideshow = [
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-1.c5d2141c.jpg&w=640&q=75",
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-2.3c6c01cf.jpg&w=640&q=75",
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-3.454151b1.jpg&w=640&q=75",
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-4.5c6d0ed6.jpg&w=640&q=75",
+  "https://spotlight.tailwindui.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fimage-5.6c6f2784.jpg&w=640&q=75",
+];
+
+function Profile() {
   const emailInput = useRef(null);
   const onFormSubmit = (e) => {
     e.preventDefault();
-    console.log(emailInput.current.value);
     // redirect to thanks for subscribing
   };
 
@@ -29,7 +60,7 @@ function Home() {
     <div className="md:px-10 lg:px-20 overflow-hidden sm:overflow-visible">
       <div className="px-4 ">
         <img
-          src="https://img.freepik.com/premium-vector/illustration-person-waving_498048-103.jpg"
+          src={profileImageUrl}
           alt="profile"
           className="aspect-auto h-full w-16 rounded-full mb-6"
         />
@@ -82,57 +113,48 @@ function Home() {
           </li>
         </ul>
       </div>
-      <div className="relative flex justify-center gap-6">
-        <div className="w-44 sm:w-72 aspect-[9/10] bg-contain  rounded-2xl overflow-hidden flex-none rotate-2">
+      <div className="flex justify-center gap-x-8">
+        <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 -rotate-2">
           <img
-            src={require("../assets/images/SpaceX--e1569850545866.jpeg")}
-            alt="coding"
-            className="h-full  object-cover"
+            src={imagesSlideshow[0]}
+            alt="plane"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="w-44 sm:w-72 aspect-[9/10] bg-contain  rounded-2xl overflow-hidden flex-none -rotate-2">
+        <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
           <img
-            src={require("../assets/images/coding-significato.jpg")}
-            alt="coding"
-            className="h-full object-cover"
+            src={imagesSlideshow[1]}
+            alt="conference"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="w-44 sm:w-72 aspect-[9/10] bg-contain  rounded-2xl overflow-hidden flex-none rotate-3">
+        <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
           <img
-            src={require("../assets/images/group-presentation-business.jpg")}
-            alt="coding"
-            className="h-full object-cover"
+            src={imagesSlideshow[2]}
+            alt="computer"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="w-44 sm:w-72 aspect-[9/10] bg-contain  rounded-2xl overflow-hidden flex-none rotate-6">
+        <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 -rotate-1">
           <img
-            src={require("../assets/images/highest-mountains-in-the-world-everest.jpg")}
-            alt="coding"
-            className="h-full object-cover"
+            src={imagesSlideshow[3]}
+            alt="mountain"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
-        <div className="w-44 sm:w-72 aspect-[9/10] bg-contain  rounded-2xl overflow-hidden flex-none -rotate-2">
+        <div className="relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 sm:w-72 sm:rounded-2xl dark:bg-zinc-800 rotate-2">
           <img
-            src={require("../assets/images/comment-travailler-en-équipe.png")}
-            alt="coding"
-            className="h-full  object-cover"
+            src={imagesSlideshow[4]}
+            alt="mars"
+            className="absolute inset-0 h-full w-full object-cover"
           />
         </div>
       </div>
       <div className="grid lg:grid-cols-2 mt-24 mb-4 w-full">
         <div className="col-start-1">
-          <ArticlePreview
-            title="Hello world!"
-            description="A Python-based project revolving around Acidanthera's OpenCorePkg and Lilu for both running and unlocking features in macOS on supported and unsupported Macs."
-          />
-          <ArticlePreview
-            title="Hello world!"
-            description="A Python-based project revolving around Acidanthera's OpenCorePkg and Lilu for both running and unlocking features in macOS on supported and unsupported Macs."
-          />
-          <ArticlePreview
-            title="Hello world!"
-            description="A Python-based project revolving around Acidanthera's OpenCorePkg and Lilu for both running and unlocking features in macOS on supported and unsupported Macs."
-          />
+          {dummyArticles.map((el) => (
+            <ArticlePreview {...el} />
+          ))}
         </div>
         <div className="lg:col-start-2 md:ml-10 px-4">
           <form
@@ -187,7 +209,7 @@ function Home() {
               <CvListElement
                 svgIcon={FacebookIcon}
                 company="Facebook"
-                position={"iOS Softare Engineer"}
+                position={"iOS Software Engineer"}
                 years={"2011 - 2014"}
               />
               <CvListElement
@@ -211,4 +233,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default Profile;

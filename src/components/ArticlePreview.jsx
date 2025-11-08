@@ -2,25 +2,11 @@ import React from "react";
 import { useNavigation } from "react-router-dom";
 import { getFormattedDate } from "../utils/utilities";
 
-export default function ArticlePreview({
-  title = "no title",
-  description = "no description",
-  path = "/",
-  dateISO,
-}) {
-  const dateDisplayed = getFormattedDate();
-  const navigation = useNavigation();
-
-  const onClick = () => {
-    // navigation
-    console.log("click");
-  };
+export default function ArticlePreview({ title, description, isoDate }) {
+  const dateDisplayed = getFormattedDate(isoDate);
 
   return (
-    <div
-      className="group relative cursor-pointer mb-12 scale-100 mx-4 sm:mx-7 md:mx-0 select-none"
-      onClick={onClick}
-    >
+    <div className="group relative cursor-pointer mb-12 scale-100 mx-4 sm:mx-7 md:mx-0 select-none">
       <div className=" md:justify-normal p-1">
         <div className="border-l-2 border-l-slate-400 text-slate-400 px-3 text-sm mb-3">
           {dateDisplayed}
